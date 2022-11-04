@@ -17,8 +17,18 @@
 
 * twittter_validation.csv: for validation data
 
+In this notebook I only use twitter_training.csv 
+
 
 # Exploratory Data Analysis
 
-1. 
+**1. Show first five records in dataset**
+
+![image](https://user-images.githubusercontent.com/91602612/199879543-e2eccbed-af7c-4d35-8862-0b072dd7e42d.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From that picture, we can see that there are no columns name, therefore we add name for each columns
+
+![image](https://user-images.githubusercontent.com/91602612/199879727-9232496f-d2e9-4df2-99b6-ff59a06044df.png)
+
+
 2. 
