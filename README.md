@@ -2,6 +2,7 @@
 
 # Overview
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sentiment Analysis is a NLP (Natural Language Processing) problem to determine whether the sentiment is positive or negative. In this case, we use twitter's sentiment to deterimine whether is it positive, negative, neutral or irrelevant. 
 
 
 # Dataset
