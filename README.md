@@ -52,14 +52,41 @@ In this notebook I only use twitter_training.csv
 
 **1. One Hot Encoding**
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; First thing that I did in preprocessing steps is one hot encoding the label data, because label data is categorical data and not numerical. To handle this problem I used pd.get_dummies() to one hot encoding label or sentiment column.
+
+![image](https://user-images.githubusercontent.com/91602612/199888084-5a8b295e-e3ba-4e8b-bc21-aa68746ad92b.png)
+
+
 **2. Change column into numpy array**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To process the dataset we need to change each columns into numpy array to helps us tokenize them.
+
+![image](https://user-images.githubusercontent.com/91602612/199888236-bc79fec3-72ab-4e20-913c-c393f92654a3.png)
 
 **3. Split data**
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then I splitted the dataset into train_tweet, test_tweet, train_label and test_label with train size 80% and test size 20% and random_state = 42. Then we got this shape:
+
+![image](https://user-images.githubusercontent.com/91602612/199888426-9580f554-b002-44fe-abda-8fd79d12a055.png)
+
 **4. Tokenizer**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After that I am using tokenizer to tokenize train_tweet with num_words is 10000 and change unknown character with <oov>. After fit tokenizer into train_tweet, I am using tokenizer.texts_to_sequences() to change texts in train_tweet and test_tweet into sequences.
 
 **5. Add padding**
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To handle different length in each sequences I used pad_sequences in train_sequences and test_sequences to padding each sequence with parameter max_len = 150, padding='post' therefore the additional values or padding can be in the back of sequence, and truncating = 'post' therefore we crop sequence from back.
+
 # Build Model
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I build model with tensorflow and using Embedding layers and Bidirectional LSTM layers to help me train my model I used input_dim = 10000, output_dim = 16, and input_length = 150.
+
+![image](https://user-images.githubusercontent.com/91602612/199889768-d4556601-db0e-466d-9556-28edc0324eaa.png)
+
+
 # Evaluate Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am using callback and my callback stop the training in 9 epochs and I got 92% accuracy, 84% val_accuracy, 19% loss and 59% val_loss.
+
+![image](https://user-images.githubusercontent.com/91602612/199889796-5732af08-7e4f-4b30-9b62-d88a54b3ebf6.png)
+
