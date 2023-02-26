@@ -1,0 +1,27 @@
+<html>
+   <head>
+      <title>Twitter Sentiment Analysis</title>
+      <meta name="view">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   </head>
+
+
+   <body>
+      
+      <img src="{{url_for('static', path='twitter-transparent-app-2.png')}}" style="display:block; width: 10%; margin-left: auto; margin-right: auto;">
+      <h1 style="text-align: center; padding-top: 20px;">TWITTER SENTIMENT ANALYSIS</h1>
+
+      <form action="/predict" method="POST" style="text-align: center; padding-top: 20px;">
+         <!-- <h3 style="padding-top: 20px;">Write any Text</h3> -->
+         <p><input type='text' name='text' style="width: 500px; height: 30px;"/></p>
+         <input class="btn btn-primary" type="submit" value="Submit">
+      </form>
+
+      <div class="results" style="text-align: center; padding-top: 30px;">
+         <h5>Text: </h5>
+         <p> {{text}} </p>
+         <h5 style="padding-top: 30px;"> Sentiment: </h5>
+         <p> {{sentiment}} </p>
+      </div>
+   </body>
+</html>
