@@ -4,6 +4,19 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sentiment Analysis is a NLP (Natural Language Processing) problem to determine whether the sentiment is positive or negative. In this case, we use twitter's sentiment to deterimine whether is it positive, negative, neutral or irrelevant. 
 
+# Application
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I built this application using several tools, libraries and frameworks. Especially for notebook I used Google Colab to help me built the model from notebook
+
+1. Tensorflow
+2. pandas
+3. seaborn
+4. matplotlib
+5. sklearn
+6. numpy
+7. zipfile
+8. html
+9. FastAPI
 
 # Dataset
 
@@ -19,8 +32,9 @@
 
 In this notebook I only use twitter_training.csv 
 
+# Notebook
 
-# Exploratory Data Analysis
+## Exploratory Data Analysis
 
 **1. Show first five records in dataset**
 
@@ -48,7 +62,7 @@ In this notebook I only use twitter_training.csv
 
 ![image](https://user-images.githubusercontent.com/91602612/199883252-c7460ff8-d4a8-4975-b73f-8f31c582a514.png)
 
-# Data Preprocessing
+## Data Preprocessing
 
 **1. One Hot Encoding**
 
@@ -77,14 +91,14 @@ In this notebook I only use twitter_training.csv
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To handle different length in each sequences I used pad_sequences in train_sequences and test_sequences to padding each sequence with parameter max_len = 150, padding='post' therefore the additional values or padding can be in the back of sequence, and truncating = 'post' therefore we crop sequence from back.
 
-# Build Model
+## Build Model
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I build model with tensorflow and using Embedding layers and Bidirectional LSTM layers to help me train my model I used input_dim = 10000, output_dim = 16, and input_length = 150.
 
 ![image](https://user-images.githubusercontent.com/91602612/199889768-d4556601-db0e-466d-9556-28edc0324eaa.png)
 
 
-# Evaluate Model
+## Evaluate Model
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am using callback and my callback stop the training in 9 epochs and I got 92% accuracy, 84% val_accuracy, 19% loss and 59% val_loss.
 
