@@ -4,7 +4,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sentiment Analysis is a NLP (Natural Language Processing) problem to determine whether the sentiment is positive or negative. In this case, we use twitter's sentiment to deterimine whether is it positive, negative, neutral or irrelevant. 
 
-# Application
+# App
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I built this application using several tools, libraries and frameworks. Especially for notebook I used Google Colab to help me built the model from notebook
 
@@ -17,6 +17,11 @@
 7. zipfile
 8. html
 9. FastAPI
+
+## App Overview
+
+![image](https://user-images.githubusercontent.com/91602612/221422051-c855c8b0-6293-4600-857a-ecb839fdacf0.png)
+
 
 # Dataset
 
