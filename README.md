@@ -18,6 +18,12 @@
 8. html
 9. FastAPI
 
+## Run App
+
+1. Go to web directory in terminal
+2. Run the application using this command ```uvicorn app:app```
+3. Go to the link http://127.0.0.1:8000/
+
 ## App Overview
 
 ![image](https://user-images.githubusercontent.com/91602612/221422051-c855c8b0-6293-4600-857a-ecb839fdacf0.png)
